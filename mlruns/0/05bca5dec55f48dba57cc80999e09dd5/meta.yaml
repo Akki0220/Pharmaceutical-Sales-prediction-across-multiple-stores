@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/DELL/next%20hikes/Phamaceutical%20sales%20prediction%20across%20multiple%20stores/mlruns/0/05bca5dec55f48dba57cc80999e09dd5/artifacts
+end_time: 1728747493791
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 05bca5dec55f48dba57cc80999e09dd5
+run_name: LSTM_Sales_Prediction
+run_uuid: 05bca5dec55f48dba57cc80999e09dd5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1728747493682
+status: 3
+tags: []
+user_id: DELL

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rossmann Sales Prediction</title>
+</head>
+<body>
+    <h1>Rossmann Sales Prediction Dashboard</h1>
+
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <label for="store_id">Store ID:</label>
+        <input type="number" id="store_id" name="store_id" required><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="is_holiday">Is Holiday (1 for Yes, 0 for No):</label>
+        <input type="number" id="is_holiday" name="is_holiday" required><br><br>
+
+        <label for="is_weekend">Is Weekend (1 for Yes, 0 for No):</label>
+        <input type="number" id="is_weekend" name="is_weekend" required><br><br>
+
+        <label for="is_promo">Is Promo (1 for Yes, 0 for No):</label>
+        <input type="number" id="is_promo" name="is_promo" required><br><br>
+
+        <label for="file">Upload CSV File (Optional):</label>
+        <input type="file" id="file" name="file"><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const response = await fetch('/predict', {
+                method: 'POST',
+                body: formData,
+            });
+
+            const result = await response.json();
+            document.getElementById('output').innerHTML = `
+                <h2>Predicted Sales: ${result.predicted_sales}</h2>
+                <h2>Predicted Customers: ${result.predicted_customers}</h2>
+            `;
+        });
+    </script>
+</body>
+</html>

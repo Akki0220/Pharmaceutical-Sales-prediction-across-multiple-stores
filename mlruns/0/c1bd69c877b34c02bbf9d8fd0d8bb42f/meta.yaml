@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/DELL/next%20hikes/Phamaceutical%20sales%20prediction%20across%20multiple%20stores/mlruns/0/c1bd69c877b34c02bbf9d8fd0d8bb42f/artifacts
+end_time: 1724741424696
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c1bd69c877b34c02bbf9d8fd0d8bb42f
+run_name: masked-doe-699
+run_uuid: c1bd69c877b34c02bbf9d8fd0d8bb42f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1724741424542
+status: 4
+tags: []
+user_id: DELL
